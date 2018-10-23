@@ -2,20 +2,25 @@ import java.util.*;
 import java.math.*;
 class Main {
   public static void main(String[] args) {
-    System.out.println("digite A ? ");
+    System.out.print("digite A ? ");
     Scanner ler = new Scanner(System.in);
     double A = ler.nextDouble();
-    System.out.println("digite B ? ");
+    System.out.print("digite B ? ");
     double B = ler.nextDouble();
-    System.out.println("digite C ? ");
+    System.out.print("digite C ? ");
     double C = ler.nextDouble();
     double baskara = (B*B) - 4 *A*C;
-    double baskararaiz = Math.sqrt(baskara);
-    double X1 = ((-(B)+baskararaiz) / 2 * A);
-    double X2 = ((-(B)-baskararaiz) / 2 * A);
-    System.out.println("X 1 linha = ");
-    System.out.println(X1);
-    System.out.println("X 2 linha = ");
-    System.out.println(X2);
+    if(baskara < 0 ){
+      System.out.println("O baskara é negativo e não tem raiz. ");
+    }
+    else{
+      double baskararaiz = Math.sqrt(baskara);
+      double X1 = ((-(B)+baskararaiz) / 2 * A);
+      double X2 = ((-(B)-baskararaiz) / 2 * A);
+      System.out.println("X 1 linha = ");
+      System.out.println(X1);
+      System.out.println("X 2 linha = ");
+      System.out.println(X2);
+    }
   }
 }
