@@ -1,0 +1,24 @@
+package aula;
+
+import java.util.Scanner;
+
+public class aula {
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		System.out.print("Nota 1: ");
+		double num1 = ler.nextInt();
+		System.out.print("Peso da nota 1: ");
+		double peso1 = ler.nextInt();
+		System.out.print("Nota 2: ");
+		double num2 = ler.nextInt();
+		System.out.print("Peso da nota 2: ");
+		double peso2 = ler.nextInt();
+		System.out.print("Nota 3: ");
+		double num3 = ler.nextInt();
+		System.out.print("Peso da nota 3: ");
+		double peso3 = ler.nextInt();
+		double media = (num1 * peso1 + num2*peso2 + num3*peso3) / peso1 + peso2 + peso3;
+		System.out.println("A media é = " + media);
+	}
+
+}
